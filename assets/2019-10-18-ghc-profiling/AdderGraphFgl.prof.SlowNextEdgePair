@@ -1,0 +1,185 @@
+	Thu Oct 17 14:34 2019 Time and Allocation Profiling Report  (Final)
+
+	   AdderGraphFgl +RTS -p -RTS
+
+	total time  =      261.53 secs   (261528 ticks @ 1000 us, 1 processor)
+	total alloc = 413,605,229,808 bytes  (excludes profiling overheads)
+
+COST CENTRE      MODULE                     SRC                                             %time %alloc
+
+uniq             Main                       AdderGraphFgl.hs:203:1-24                        44.1   27.7
+ufold            Data.Graph.Inductive.Graph Data/Graph/Inductive/Graph.hs:(209,1)-(213,23)   40.1   52.1
+nextEdgePair.ids Main                       AdderGraphFgl.hs:65:9-69                          8.3   12.1
+pairID           Main                       AdderGraphFgl.hs:16:5-10                          1.9    0.0
+nextEdgePair     Main                       AdderGraphFgl.hs:(64,1)-(65,69)                   1.6    5.2
+insEdge          Data.Graph.Inductive.Graph Data/Graph/Inductive/Graph.hs:(278,1)-(283,25)    1.5    2.8
+edgeLabel        Data.Graph.Inductive.Graph Data/Graph/Inductive/Graph.hs:257:1-21            1.4    0.0
+nextEdgePair.\   Main                       AdderGraphFgl.hs:64:48-51                         1.1    0.0
+
+
+                                                                                                                                                    individual      inherited
+COST CENTRE                                     MODULE                            SRC                                            no.     entries  %time %alloc   %time %alloc
+
+MAIN                                            MAIN                              <built-in>                                     145          0    0.0    0.0   100.0  100.0
+ CAF                                            Main                              <entire-module>                                289          0    0.0    0.0   100.0  100.0
+  emptyMag                                      Main                              AdderGraphFgl.hs:166:1-30                      311          1    0.0    0.0     0.0    0.0
+   insNode                                      Data.Graph.Inductive.Graph        Data/Graph/Inductive/Graph.hs:273:1-30         312          1    0.0    0.0     0.0    0.0
+  main                                          Main                              AdderGraphFgl.hs:214:1-52                      290          1    0.0    0.0   100.0  100.0
+   showsPrec                                    Main                              AdderGraphFgl.hs:19:15-18                      390       4568    0.0    0.0     0.0    0.0
+    showsPrec                                   Main                              AdderGraphFgl.hs:13:25-28                      402       4568    0.0    0.0     0.0    0.0
+   lookupMag                                    Main                              AdderGraphFgl.hs:(168,1)-(172,10)              292          1    0.0    0.0   100.0  100.0
+    pruneRange                                  Main                              AdderGraphFgl.hs:72:1-42                       293          3    0.0    0.0     0.0    0.0
+     nfilter                                    Data.Graph.Inductive.Graph        Data/Graph/Inductive/Graph.hs:364:1-32         294          3    0.0    0.0     0.0    0.0
+      labnfilter                                Data.Graph.Inductive.Graph        Data/Graph/Inductive/Graph.hs:359:1-72         295          3    0.0    0.0     0.0    0.0
+       delNodes                                 Data.Graph.Inductive.Graph        Data/Graph/Inductive/Graph.hs:331:1-47         328          3    0.0    0.0     0.0    0.0
+    addCost1s                                   Main                              AdderGraphFgl.hs:(112,1)-(117,3)               306          1    0.0    0.0     0.0    0.0
+     addNodePermutations                        Main                              AdderGraphFgl.hs:(82,1)-(93,32)                314          9    0.0    0.0     0.0    0.0
+      addNodePermutations.insNewContext         Main                              AdderGraphFgl.hs:85:9-93                       315         18    0.0    0.0     0.0    0.0
+       addNodePermutations.newContext           Main                              AdderGraphFgl.hs:(86,9)-(93,32)                317         18    0.0    0.0     0.0    0.0
+        addNodePermutations.newContext.node     Main                              AdderGraphFgl.hs:(88,15)-(90,48)               318         18    0.0    0.0     0.0    0.0
+         ==                                     Main                              AdderGraphFgl.hs:13:37-38                      319         27    0.0    0.0     0.0    0.0
+        addNodePermutations.newContext.ePairID  Main                              AdderGraphFgl.hs:87:15-39                      391         15    0.0    0.0     0.0    0.0
+         nextEdgePair                           Main                              AdderGraphFgl.hs:(64,1)-(65,69)                392         15    0.0    0.0     0.0    0.0
+          nextEdgePair.\                        Main                              AdderGraphFgl.hs:64:48-51                      401        120    0.0    0.0     0.0    0.0
+          nextEdgePair.ids                      Main                              AdderGraphFgl.hs:65:9-69                       393         15    0.0    0.0     0.0    0.0
+           edgeLabel                            Data.Graph.Inductive.Graph        Data/Graph/Inductive/Graph.hs:257:1-21         399        210    0.0    0.0     0.0    0.0
+           emap                                 Data.Graph.Inductive.Graph        Data/Graph/Inductive/Graph.hs:(227,1)-(229,26) 396         15    0.0    0.0     0.0    0.0
+            gmap                                Data.Graph.Inductive.Graph        Data/Graph/Inductive/Graph.hs:217:1-33         397         15    0.0    0.0     0.0    0.0
+             ufold                              Data.Graph.Inductive.Graph        Data/Graph/Inductive/Graph.hs:(209,1)-(213,23) 398        123    0.0    0.0     0.0    0.0
+              pairID                            Main                              AdderGraphFgl.hs:16:5-10                       400        210    0.0    0.0     0.0    0.0
+           uniq                                 Main                              AdderGraphFgl.hs:203:1-24                      395          0    0.0    0.0     0.0    0.0
+       insMagContext                            Main                              AdderGraphFgl.hs:(30,1)-(43,34)                316         18    0.0    0.0     0.0    0.0
+        lab                                     Data.Graph.Inductive.Graph        Data/Graph/Inductive/Graph.hs:384:1-37         320         16    0.0    0.0     0.0    0.0
+        lab'                                    Data.Graph.Inductive.Graph        Data/Graph/Inductive/Graph.hs:437:1-18         321          4    0.0    0.0     0.0    0.0
+        insEdges                                Data.Graph.Inductive.Graph        Data/Graph/Inductive/Graph.hs:326:1-42         324          2    0.0    0.0     0.0    0.0
+         insEdge                                Data.Graph.Inductive.Graph        Data/Graph/Inductive/Graph.hs:(278,1)-(283,25) 327          2    0.0    0.0     0.0    0.0
+        insMagContext.prevCont                  Main                              AdderGraphFgl.hs:43:9-34                       322          2    0.0    0.0     0.0    0.0
+         context                                Data.Graph.Inductive.Graph        Data/Graph/Inductive/Graph.hs:(379,1)-(380,41) 323          2    0.0    0.0     0.0    0.0
+        inn'                                    Data.Graph.Inductive.Graph        Data/Graph/Inductive/Graph.hs:473:1-55         326          1    0.0    0.0     0.0    0.0
+        out'                                    Data.Graph.Inductive.Graph        Data/Graph/Inductive/Graph.hs:469:1-55         325          1    0.0    0.0     0.0    0.0
+     filterByCost                               Main                              AdderGraphFgl.hs:58:1-46                       307          9    0.0    0.0     0.0    0.0
+      labfilter                                 Data.Graph.Inductive.Graph        Data/Graph/Inductive/Graph.hs:369:1-34         309          9    0.0    0.0     0.0    0.0
+       labnfilter                               Data.Graph.Inductive.Graph        Data/Graph/Inductive/Graph.hs:359:1-72         310          9    0.0    0.0     0.0    0.0
+        delNodes                                Data.Graph.Inductive.Graph        Data/Graph/Inductive/Graph.hs:331:1-47         313          9    0.0    0.0     0.0    0.0
+      nodes                                     Data.Graph.Inductive.Graph        Data/Graph/Inductive/Graph.hs:241:1-26         308          9    0.0    0.0     0.0    0.0
+    addCost2s                                   Main                              AdderGraphFgl.hs:(124,1)-(132,3)               301          1    0.0    0.0     0.1    0.1
+     addNodePermutations                        Main                              AdderGraphFgl.hs:(82,1)-(93,32)                337        117    0.0    0.0     0.0    0.0
+      addNodePermutations.insNewContext         Main                              AdderGraphFgl.hs:85:9-93                       338        234    0.0    0.0     0.0    0.0
+       addNodePermutations.newContext           Main                              AdderGraphFgl.hs:(86,9)-(93,32)                340        234    0.0    0.0     0.0    0.0
+        addNodePermutations.newContext.node     Main                              AdderGraphFgl.hs:(88,15)-(90,48)               341        234    0.0    0.0     0.0    0.0
+         ==                                     Main                              AdderGraphFgl.hs:13:37-38                      342        351    0.0    0.0     0.0    0.0
+        addNodePermutations.newContext.ePairID  Main                              AdderGraphFgl.hs:87:15-39                      413        178    0.0    0.0     0.0    0.0
+         nextEdgePair                           Main                              AdderGraphFgl.hs:(64,1)-(65,69)                414        178    0.0    0.0     0.0    0.0
+          nextEdgePair.\                        Main                              AdderGraphFgl.hs:64:48-51                      422      44796    0.0    0.0     0.0    0.0
+          nextEdgePair.ids                      Main                              AdderGraphFgl.hs:65:9-69                       415        178    0.0    0.0     0.0    0.0
+           edgeLabel                            Data.Graph.Inductive.Graph        Data/Graph/Inductive/Graph.hs:257:1-21         420      89236    0.0    0.0     0.0    0.0
+           emap                                 Data.Graph.Inductive.Graph        Data/Graph/Inductive/Graph.hs:(227,1)-(229,26) 417        178    0.0    0.0     0.0    0.0
+            gmap                                Data.Graph.Inductive.Graph        Data/Graph/Inductive/Graph.hs:217:1-33         418        178    0.0    0.0     0.0    0.0
+             ufold                              Data.Graph.Inductive.Graph        Data/Graph/Inductive/Graph.hs:(209,1)-(213,23) 419      25753    0.0    0.0     0.0    0.0
+              pairID                            Main                              AdderGraphFgl.hs:16:5-10                       421      89236    0.0    0.0     0.0    0.0
+           uniq                                 Main                              AdderGraphFgl.hs:203:1-24                      416          0    0.0    0.0     0.0    0.0
+       insMagContext                            Main                              AdderGraphFgl.hs:(30,1)-(43,34)                339        234    0.0    0.0     0.0    0.0
+        lab'                                    Data.Graph.Inductive.Graph        Data/Graph/Inductive/Graph.hs:437:1-18         348        301    0.0    0.0     0.0    0.0
+        lab                                     Data.Graph.Inductive.Graph        Data/Graph/Inductive/Graph.hs:384:1-37         347        208    0.0    0.0     0.0    0.0
+        insEdges                                Data.Graph.Inductive.Graph        Data/Graph/Inductive/Graph.hs:326:1-42         355        186    0.0    0.0     0.0    0.0
+         insEdge                                Data.Graph.Inductive.Graph        Data/Graph/Inductive/Graph.hs:(278,1)-(283,25) 358        186    0.0    0.0     0.0    0.0
+        insMagContext.prevCont                  Main                              AdderGraphFgl.hs:43:9-34                       349        115    0.0    0.0     0.0    0.0
+         context                                Data.Graph.Inductive.Graph        Data/Graph/Inductive/Graph.hs:(379,1)-(380,41) 350        115    0.0    0.0     0.0    0.0
+        inn'                                    Data.Graph.Inductive.Graph        Data/Graph/Inductive/Graph.hs:473:1-55         357         93    0.0    0.0     0.0    0.0
+        out'                                    Data.Graph.Inductive.Graph        Data/Graph/Inductive/Graph.hs:469:1-55         356         93    0.0    0.0     0.0    0.0
+     addNodePermutations'                       Main                              AdderGraphFgl.hs:(103,1)-(105,40)              330        117    0.0    0.0     0.1    0.1
+      addNodePermutations                       Main                              AdderGraphFgl.hs:(82,1)-(93,32)                331        234    0.0    0.0     0.1    0.1
+       addNodePermutations.insNewContext        Main                              AdderGraphFgl.hs:85:9-93                       332        468    0.0    0.0     0.1    0.1
+        addNodePermutations.newContext          Main                              AdderGraphFgl.hs:(86,9)-(93,32)                334        468    0.0    0.0     0.1    0.1
+         addNodePermutations.newContext.node    Main                              AdderGraphFgl.hs:(88,15)-(90,48)               335        468    0.0    0.0     0.0    0.0
+          ==                                    Main                              AdderGraphFgl.hs:13:37-38                      336        702    0.0    0.0     0.0    0.0
+         addNodePermutations.newContext.ePairID Main                              AdderGraphFgl.hs:87:15-39                      403        301    0.0    0.0     0.1    0.1
+          nextEdgePair                          Main                              AdderGraphFgl.hs:(64,1)-(65,69)                404        301    0.0    0.0     0.1    0.1
+           nextEdgePair.\                       Main                              AdderGraphFgl.hs:64:48-51                      412      76869    0.0    0.0     0.0    0.0
+           nextEdgePair.ids                     Main                              AdderGraphFgl.hs:65:9-69                       405        301    0.0    0.0     0.1    0.1
+            edgeLabel                           Data.Graph.Inductive.Graph        Data/Graph/Inductive/Graph.hs:257:1-21         410     153138    0.0    0.0     0.0    0.0
+            emap                                Data.Graph.Inductive.Graph        Data/Graph/Inductive/Graph.hs:(227,1)-(229,26) 407        301    0.0    0.0     0.0    0.0
+             gmap                               Data.Graph.Inductive.Graph        Data/Graph/Inductive/Graph.hs:217:1-33         408        301    0.0    0.0     0.0    0.0
+              ufold                             Data.Graph.Inductive.Graph        Data/Graph/Inductive/Graph.hs:(209,1)-(213,23) 409      44042    0.0    0.0     0.0    0.0
+               pairID                           Main                              AdderGraphFgl.hs:16:5-10                       411     153138    0.0    0.0     0.0    0.0
+            uniq                                Main                              AdderGraphFgl.hs:203:1-24                      406          0    0.0    0.0     0.0    0.0
+        insMagContext                           Main                              AdderGraphFgl.hs:(30,1)-(43,34)                333        468    0.0    0.0     0.0    0.0
+         lab'                                   Data.Graph.Inductive.Graph        Data/Graph/Inductive/Graph.hs:437:1-18         344        484    0.0    0.0     0.0    0.0
+         lab                                    Data.Graph.Inductive.Graph        Data/Graph/Inductive/Graph.hs:384:1-37         343        361    0.0    0.0     0.0    0.0
+         insEdges                               Data.Graph.Inductive.Graph        Data/Graph/Inductive/Graph.hs:326:1-42         351        290    0.0    0.0     0.0    0.0
+          insEdge                               Data.Graph.Inductive.Graph        Data/Graph/Inductive/Graph.hs:(278,1)-(283,25) 354        290    0.0    0.0     0.0    0.0
+         insMagContext.prevCont                 Main                              AdderGraphFgl.hs:43:9-34                       345        194    0.0    0.0     0.0    0.0
+          context                               Data.Graph.Inductive.Graph        Data/Graph/Inductive/Graph.hs:(379,1)-(380,41) 346        194    0.0    0.0     0.0    0.0
+         inn'                                   Data.Graph.Inductive.Graph        Data/Graph/Inductive/Graph.hs:473:1-55         353        145    0.0    0.0     0.0    0.0
+         out'                                   Data.Graph.Inductive.Graph        Data/Graph/Inductive/Graph.hs:469:1-55         352        145    0.0    0.0     0.0    0.0
+     filterByCost                               Main                              AdderGraphFgl.hs:58:1-46                       302         18    0.0    0.0     0.0    0.0
+      labfilter                                 Data.Graph.Inductive.Graph        Data/Graph/Inductive/Graph.hs:369:1-34         304         18    0.0    0.0     0.0    0.0
+       labnfilter                               Data.Graph.Inductive.Graph        Data/Graph/Inductive/Graph.hs:359:1-72         305         18    0.0    0.0     0.0    0.0
+        delNodes                                Data.Graph.Inductive.Graph        Data/Graph/Inductive/Graph.hs:331:1-47         329         18    0.0    0.0     0.0    0.0
+      nodes                                     Data.Graph.Inductive.Graph        Data/Graph/Inductive/Graph.hs:241:1-26         303         18    0.0    0.0     0.0    0.0
+    addCost3s                                   Main                              AdderGraphFgl.hs:(139,1)-(161,3)               296          1    0.0    0.0    99.9   99.9
+     addNodePermutations'                       Main                              AdderGraphFgl.hs:(103,1)-(105,40)              360       5823    0.0    0.0    89.5   89.6
+      addNodePermutations                       Main                              AdderGraphFgl.hs:(82,1)-(93,32)                361      11646    0.0    0.0    89.5   89.6
+       addNodePermutations.insNewContext        Main                              AdderGraphFgl.hs:85:9-93                       362      23292    0.0    0.0    89.5   89.6
+        addNodePermutations.newContext          Main                              AdderGraphFgl.hs:(86,9)-(93,32)                364      23292    0.0    0.0    87.9   86.8
+         addNodePermutations.newContext.node    Main                              AdderGraphFgl.hs:(88,15)-(90,48)               365      23292    0.0    0.0     0.0    0.0
+          ==                                    Main                              AdderGraphFgl.hs:13:37-38                      366      34938    0.0    0.0     0.0    0.0
+         addNodePermutations.newContext.ePairID Main                              AdderGraphFgl.hs:87:15-39                      423      12939    0.0    0.0    87.9   86.8
+          nextEdgePair                          Main                              AdderGraphFgl.hs:(64,1)-(65,69)                424      12939    1.4    4.6    87.9   86.8
+           nextEdgePair.\                       Main                              AdderGraphFgl.hs:64:48-51                      432   88599441    1.0    0.0     1.0    0.0
+           nextEdgePair.ids                     Main                              AdderGraphFgl.hs:65:9-69                       425      12939    7.4   10.9    85.5   82.2
+            edgeLabel                           Data.Graph.Inductive.Graph        Data/Graph/Inductive/Graph.hs:257:1-21         430  177200460    1.3    0.0     1.3    0.0
+            emap                                Data.Graph.Inductive.Graph        Data/Graph/Inductive/Graph.hs:(227,1)-(229,26) 427      12939    0.0    0.0    37.5   46.6
+             gmap                               Data.Graph.Inductive.Graph        Data/Graph/Inductive/Graph.hs:217:1-33         428      12939    0.0    0.0    37.5   46.6
+              ufold                             Data.Graph.Inductive.Graph        Data/Graph/Inductive/Graph.hs:(209,1)-(213,23) 429   23068745   35.9   46.6    37.5   46.6
+               pairID                           Main                              AdderGraphFgl.hs:16:5-10                       431  177200460    1.6    0.0     1.6    0.0
+            uniq                                Main                              AdderGraphFgl.hs:203:1-24                      426          0   39.4   24.7    39.4   24.7
+        insMagContext                           Main                              AdderGraphFgl.hs:(30,1)-(43,34)                363      23292    0.0    0.0     1.6    2.8
+         lab'                                   Data.Graph.Inductive.Graph        Data/Graph/Inductive/Graph.hs:437:1-18         368      38856    0.0    0.0     0.0    0.0
+         insEdges                               Data.Graph.Inductive.Graph        Data/Graph/Inductive/Graph.hs:326:1-42         371      23282    0.0    0.0     1.5    2.7
+          insEdge                               Data.Graph.Inductive.Graph        Data/Graph/Inductive/Graph.hs:(278,1)-(283,25) 374      23282    1.5    2.7     1.5    2.7
+         lab                                    Data.Graph.Inductive.Graph        Data/Graph/Inductive/Graph.hs:384:1-37         367      18617    0.1    0.0     0.1    0.0
+         insMagContext.prevCont                 Main                              AdderGraphFgl.hs:43:9-34                       369      15574    0.0    0.0     0.0    0.0
+          context                               Data.Graph.Inductive.Graph        Data/Graph/Inductive/Graph.hs:(379,1)-(380,41) 370      15574    0.0    0.0     0.0    0.0
+         inn'                                   Data.Graph.Inductive.Graph        Data/Graph/Inductive/Graph.hs:473:1-55         373      11641    0.0    0.0     0.0    0.0
+         out'                                   Data.Graph.Inductive.Graph        Data/Graph/Inductive/Graph.hs:469:1-55         372      11641    0.0    0.0     0.0    0.0
+     addNodePermutations                        Main                              AdderGraphFgl.hs:(82,1)-(93,32)                376        576    0.0    0.0    10.3   10.2
+      addNodePermutations.insNewContext         Main                              AdderGraphFgl.hs:85:9-93                       377       1152    0.0    0.0    10.3   10.2
+       addNodePermutations.newContext           Main                              AdderGraphFgl.hs:(86,9)-(93,32)                379       1152    0.0    0.0    10.3   10.2
+        addNodePermutations.newContext.node     Main                              AdderGraphFgl.hs:(88,15)-(90,48)               380       1152    0.0    0.0     0.0    0.0
+         ==                                     Main                              AdderGraphFgl.hs:13:37-38                      381       1728    0.0    0.0     0.0    0.0
+        addNodePermutations.newContext.ePairID  Main                              AdderGraphFgl.hs:87:15-39                      433        912    0.0    0.0    10.3   10.2
+         nextEdgePair                           Main                              AdderGraphFgl.hs:(64,1)-(65,69)                434        912    0.2    0.5    10.3   10.2
+          nextEdgePair.\                        Main                              AdderGraphFgl.hs:64:48-51                      442   10379928    0.1    0.0     0.1    0.0
+          nextEdgePair.ids                      Main                              AdderGraphFgl.hs:65:9-69                       435        912    0.9    1.3    10.0    9.6
+           edgeLabel                            Data.Graph.Inductive.Graph        Data/Graph/Inductive/Graph.hs:257:1-21         440   20758032    0.1    0.0     0.1    0.0
+           emap                                 Data.Graph.Inductive.Graph        Data/Graph/Inductive/Graph.hs:(227,1)-(229,26) 437        912    0.0    0.0     4.4    5.4
+            gmap                                Data.Graph.Inductive.Graph        Data/Graph/Inductive/Graph.hs:217:1-33         438        912    0.0    0.0     4.4    5.4
+             ufold                              Data.Graph.Inductive.Graph        Data/Graph/Inductive/Graph.hs:(209,1)-(213,23) 439    2612526    4.1    5.4     4.4    5.4
+              pairID                            Main                              AdderGraphFgl.hs:16:5-10                       441   20758032    0.2    0.0     0.2    0.0
+           uniq                                 Main                              AdderGraphFgl.hs:203:1-24                      436          0    4.7    3.0     4.7    3.0
+       insMagContext                            Main                              AdderGraphFgl.hs:(30,1)-(43,34)                378       1152    0.0    0.0     0.0    0.0
+        lab'                                    Data.Graph.Inductive.Graph        Data/Graph/Inductive/Graph.hs:437:1-18         383       1831    0.0    0.0     0.0    0.0
+        insEdges                                Data.Graph.Inductive.Graph        Data/Graph/Inductive/Graph.hs:326:1-42         386       1146    0.0    0.0     0.0    0.0
+         insEdge                                Data.Graph.Inductive.Graph        Data/Graph/Inductive/Graph.hs:(278,1)-(283,25) 389       1146    0.0    0.0     0.0    0.0
+        lab                                     Data.Graph.Inductive.Graph        Data/Graph/Inductive/Graph.hs:384:1-37         382       1024    0.0    0.0     0.0    0.0
+        insMagContext.prevCont                  Main                              AdderGraphFgl.hs:43:9-34                       384        685    0.0    0.0     0.0    0.0
+         context                                Data.Graph.Inductive.Graph        Data/Graph/Inductive/Graph.hs:(379,1)-(380,41) 385        685    0.0    0.0     0.0    0.0
+        inn'                                    Data.Graph.Inductive.Graph        Data/Graph/Inductive/Graph.hs:473:1-55         388        573    0.0    0.0     0.0    0.0
+        out'                                    Data.Graph.Inductive.Graph        Data/Graph/Inductive/Graph.hs:469:1-55         387        573    0.0    0.0     0.0    0.0
+     pre                                        Data.Graph.Inductive.Graph        Data/Graph/Inductive/Graph.hs:400:1-26         375        576    0.0    0.0     0.0    0.0
+     filterByCost                               Main                              AdderGraphFgl.hs:58:1-46                       297        162    0.0    0.0     0.0    0.0
+      labfilter                                 Data.Graph.Inductive.Graph        Data/Graph/Inductive/Graph.hs:369:1-34         299        162    0.0    0.0     0.0    0.0
+       labnfilter                               Data.Graph.Inductive.Graph        Data/Graph/Inductive/Graph.hs:359:1-72         300        162    0.0    0.0     0.0    0.0
+        delNodes                                Data.Graph.Inductive.Graph        Data/Graph/Inductive/Graph.hs:331:1-47         359        162    0.0    0.0     0.0    0.0
+      nodes                                     Data.Graph.Inductive.Graph        Data/Graph/Inductive/Graph.hs:241:1-26         298        162    0.0    0.0     0.0    0.0
+  uniq                                          Main                              AdderGraphFgl.hs:203:1-24                      394          1    0.0    0.0     0.0    0.0
+ CAF                                            Data.Graph.Inductive.PatriciaTree <entire-module>                                287          0    0.0    0.0     0.0    0.0
+ CAF                                            GHC.Conc.Signal                   <entire-module>                                254          0    0.0    0.0     0.0    0.0
+ CAF                                            GHC.IO.Encoding                   <entire-module>                                238          0    0.0    0.0     0.0    0.0
+ CAF                                            GHC.IO.Encoding.Iconv             <entire-module>                                236          0    0.0    0.0     0.0    0.0
+ CAF                                            GHC.IO.Handle.FD                  <entire-module>                                228          0    0.0    0.0     0.0    0.0
+ CAF                                            GHC.Show                          <entire-module>                                210          0    0.0    0.0     0.0    0.0
+ CAF                                            System.Posix.Internals            <entire-module>                                197          0    0.0    0.0     0.0    0.0
+ CAF                                            GHC.IO.FD                         <entire-module>                                169          0    0.0    0.0     0.0    0.0
+ main                                           Main                              AdderGraphFgl.hs:214:1-52                      291          0    0.0    0.0     0.0    0.0
