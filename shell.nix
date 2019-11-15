@@ -1,15 +1,18 @@
-{ nixpkgs ? import <nixpkgs> {} }:
-let
-  inherit (nixpkgs) pkgs;
-  nixPackages = [
-    pkgs.ruby
-    pkgs.jekyll
-    pkgs.zlib
-    pkgs.bundler
-  ];
+with import <nixpkgs> { };
+
+let jekyll_env = bundlerEnv rec {
+    name = "jekyll_env";
+    ruby = ruby_2_6;
+    gemfile = ./Gemfile;
+    lockfile = ./Gemfile.lock;
+    gemset = ./gemset.nix;
+  };
 in
-pkgs.stdenv.mkDerivation {
-  name = "jekyll-local";
-  buildInputs = nixPackages;
-  shellHooks = "bundle install && bundle exec jekyll serve -o --livereload && exit";
-}
+  stdenv.mkDerivation rec {
+    name = "jekyll_env";
+    buildInputs = [ jekyll_env ];
+
+    shellHook = ''
+      exec ${jekyll_env}/bin/jekyll serve -o --livereload --watch
+    '';
+  }
