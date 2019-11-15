@@ -22,7 +22,7 @@ If you want to be added to the authors list, either:
 
   1. Pester @cramsay to do it, or...
   2. See [this
-     commit](https://github.com/strath-sdr/commit/7edc863856d0d3ab416d1a84f5e54ec906d71ba7)
+     commit](https://github.com/strath-sdr/strath-sdr.github.io/commit/7edc863856d0d3ab416d1a84f5e54ec906d71ba7)
      for an example of what to add.
 
 
@@ -51,9 +51,9 @@ like before committing it?
 
 #### For Linux/macOS users
 
-There's an environment already specified for you using the `nix` package
-manager. This is system that will run on all Linux distros, and has very nice
-deterministic properties (it's a pure functional language 😉).
+There's an environment already specified for you using the `nix` package manager
+(see `shell.nix`). This is system that will run on all Linux distros, and has
+very nice deterministic properties (it's a pure functional language 😉).
 
 First install `nix`:
 
