@@ -2,7 +2,7 @@
 layout: post
 title: Installing Voila on PYNQ Version 2.6
 author: dnorthcote
-date:   2021-02-23 10:00:00 +0100
+date: 2021-02-22 22:43:00 +0100
 categories: PYNQ Linux Zynq FPGA Voila
 ---
 
@@ -61,11 +61,11 @@ without Voila-Dashboards.
 
 * We need to open a terminal in Jupyter Lab. Firstly, open a launcher window as shown in the Figure below:
 
-![Open Jupyter Launcher](/assets/2021-02-23-install-voila-on-pynq-v2-6/open_jupyter_launcher.jpg)
+![Open Jupyter Launcher](/assets/2021-02-22-install-voila-on-pynq-v2-6/open_jupyter_launcher.jpg)
 
 * Now open a terminal in Jupyter as illustrated below:
 
-![Open a Terminal](/assets/2021-02-23-install-voila-on-pynq-v2-6/open_terminal_window.jpg)
+![Open a Terminal](/assets/2021-02-22-install-voila-on-pynq-v2-6/open_terminal_window.jpg)
 
 ## The Actual-Installation Procedure
 Now that we have our terminal open, the first thing we would like to do is uninstall the
