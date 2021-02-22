@@ -61,11 +61,11 @@ without Voila-Dashboards.
 
 * We need to open a terminal in Jupyter Lab. Firstly, open a launcher window as shown in the Figure below:
 
-![Open Jupyter Launcher](/assets/open_jupyter_launcher.jpg)
+![Open Jupyter Launcher](/assets/2021-02-23-install-voila-on-pynq-v2-6/open_jupyter_launcher.jpg)
 
 * Now open a terminal in Jupyter as illustrated below:
 
-![Open a Terminal](/assets/open_terminal_window.jpg)
+![Open a Terminal](/assets/2021-02-23-install-voila-on-pynq-v2-6/open_terminal_window.jpg)
 
 ## The Actual-Installation Procedure
 Now that we have our terminal open, the first thing we would like to do is uninstall the
