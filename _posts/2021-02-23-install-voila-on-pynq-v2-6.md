@@ -129,4 +129,4 @@ voila --help
 ```
 
 And thats all there is to it. We installed an earlier version of Voila and directly stated the correct
-version of dependecies to install. You can now use Voila on your PYNQ development platform.
+version of dependencies to install. You can now use Voila on your PYNQ development platform.
